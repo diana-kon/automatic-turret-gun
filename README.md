@@ -16,3 +16,12 @@ DIY project, to scare away animals from the places, where they are not welcome
 1. Constantly scan environment for approaching animals
 2. Once animal is detected - track the camera on it
 3. Shoot water (to debug LED Board will simulate that)
+
+## Install Dependencies
+
+```
+sudo apt-get update
+sudo apt-get install python3-pantilthat
+sudo apt-get install python3-blinkt
+sudo apt-get install python3-rpi-lgpio
+```
