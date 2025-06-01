@@ -47,4 +47,3 @@ formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 data_dog_handler.setFormatter(formatter)
 logger.addHandler(data_dog_handler)
 
-logger.warning("something")
