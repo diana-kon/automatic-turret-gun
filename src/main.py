@@ -6,7 +6,7 @@ import time
 import pantilthat
 
 def angle(current, step):
-    if (current >= 60 or current <= -60):
+    if (current >= 90 or current <= -90):
         step = 0 - step
     return (current + step, step)
 
@@ -14,7 +14,7 @@ def move(a, step, n):
     (a, step) = angle(a, step)
     pantilthat.pan(a)
     pantilthat.tilt(-20)
-    if (a % 30 == 0):
+    if (a % 45 == 0 or a == 0):
         time.sleep(2)
     else:
         time.sleep(0.003)
