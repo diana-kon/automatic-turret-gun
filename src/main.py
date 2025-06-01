@@ -13,8 +13,9 @@ def angle(current, step):
 
 def move(a, step, n):
     (a, step) = angle(a, step)
-    pantilthat.pan(a)
-    pantilthat.tilt(-20)
+    # do not control the pan-tilt for now
+    # pantilthat.pan(a)
+    # pantilthat.tilt(-20)
     if (a % 45 == 0 or a == 0):
         blinkt.set_pixel(1, 0, 128, 0, 0.2)
         blinkt.show()
