@@ -26,12 +26,20 @@ def move(a, step, n):
         time.sleep(0.003)
     return (a, step, n + 1)
 
+def blink(timestamp):
+    if (timestamp % 2 == 0):
+        blinkt.set_pixel(0, 255, 0, 0, 0.1)
+    else:
+        blinkt.set_pixel(0, 0, 0, 0)
+    blinkt.show()
+
 def main():
     a = 0
     step = 0.25
     n = 0
     cycle = 0
     while True:
+        blink(int(time.time()))
         (a, step, n) = move(a, step, n)
         if (a == 0 and step < 0):
             cycle = cycle + 1
