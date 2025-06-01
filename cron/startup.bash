@@ -4,7 +4,9 @@ cd ..
 echo "update"
 git pull
 echo "run"
+source .venv/bin/activate
 ./src/main.py
+deactivate
 echo "repeat"
 cd cron
 ./startup.bash
