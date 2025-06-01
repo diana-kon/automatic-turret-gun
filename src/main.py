@@ -4,6 +4,7 @@ import math
 import time
 
 import pantilthat
+import blinkt
 
 def angle(current, step):
     if (current >= 90 or current <= -90):
@@ -15,7 +16,11 @@ def move(a, step, n):
     pantilthat.pan(a)
     pantilthat.tilt(-20)
     if (a % 45 == 0 or a == 0):
+        blinkt.set_pixel(1, 0, 128, 0, 0.2)
+        blinkt.show()
         time.sleep(2)
+        blinkt.set_pixel(1, 0, 0, 0)
+        blinkt.show()
     else:
         time.sleep(0.003)
     return (a, step, n + 1)
