@@ -8,8 +8,8 @@ DIY project, to scare away animals from the places, where they are not welcome
 2. Pimoroni Pan-Tilt Hat - movements and tracking
 3. Raspberry Pi Camera 3 Wide - vision
 4. Blinkt! LED Board - to debug the operations
-6. OpenCV-Python for video analysis
-5. some USB controlled water pump (pending) - to shoot water in the direction of detected animal
+5. OpenCV-Python for video analysis
+6. some USB controlled water pump (pending) - to shoot water in the direction of detected animal
 
 ## Intended Operations
 
@@ -17,18 +17,24 @@ DIY project, to scare away animals from the places, where they are not welcome
 2. Once animal is detected - track the camera on it
 3. Shoot water (to debug LED Board will simulate that)
 
-## Install Dependencies (on Raspberry Pi)
+## Install Dependencies (on Raspberry Pi - with device drivers)
 
-```
-sudo apt-get update
+```bash
+# virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install -r requirements
+pip3 install blinkt pantilthat rpi-lgpio
+# global, not really needed, but might be useful
+sudo apt-get install
 sudo apt-get install python3-pantilthat
 sudo apt-get install python3-blinkt
 sudo apt-get install python3-rpi-lgpio
 ```
 
-## install Dependencies (Dev)
+## install Dependencies (Dev - without device drivers)
 
-```
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install -r requirements.txt
