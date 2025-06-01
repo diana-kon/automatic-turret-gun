@@ -7,6 +7,6 @@ crontab -e
 ```
 scripts:
 ```
-@reboot cd /home/INSERT_YOUR_USERNAME/automated-turret-gun && ./cron/blink.bash
-@reboot cd /home/INSERT_YOUR_USERNAME/automated-turret-gun && ./cron/startup.bash
+@reboot cd /home/INSERT_YOUR_USERNAME/automatic-turret-gun && ./cron/blink.bash
+@reboot cd /home/INSERT_YOUR_USERNAME/automatic-turret-gun && ./cron/startup.bash
 ```
