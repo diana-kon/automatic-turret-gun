@@ -7,5 +7,5 @@ crontab -e
 ```
 scripts:
 ```
-@reboot cd /home/INSERT_YOUR_USERNAME/automatic-turret-gun && ./cron/startup.bash
+@reboot cd /home/INSERT_YOUR_USERNAME/automatic-turret-gun && DD_API_KEY=example DD_APP_KEY=example ./cron/startup.bash
 ```

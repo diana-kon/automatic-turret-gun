@@ -2,6 +2,7 @@
 
 import math
 import time
+from logger import logger
 
 import pantilthat
 import blinkt
@@ -34,6 +35,7 @@ def blink(timestamp):
     blinkt.show()
 
 def main():
+    logger.info("it started successfully")
     a = 0
     step = 0.25
     n = 0
@@ -44,6 +46,7 @@ def main():
         if (a == 0 and step < 0):
             cycle = cycle + 1
         if (cycle > 1):
+            logger.info("it shut down gracefully")
             break
 
 main()

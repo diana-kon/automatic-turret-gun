@@ -17,11 +17,19 @@ DIY project, to scare away animals from the places, where they are not welcome
 2. Once animal is detected - track the camera on it
 3. Shoot water (to debug LED Board will simulate that)
 
-## Install Dependencies
+## Install Dependencies (on Raspberry Pi)
 
 ```
 sudo apt-get update
 sudo apt-get install python3-pantilthat
 sudo apt-get install python3-blinkt
 sudo apt-get install python3-rpi-lgpio
+```
+
+## install Dependencies (Dev)
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install -r requirements.txt
 ```
