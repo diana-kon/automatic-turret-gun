@@ -30,13 +30,17 @@ def angle(current, step):
 
 
 
-def blink(timestamp):
+def blink():
+    blinks = 0
     while True:
         for i in range(8):
             blinkt.clear()
             blinkt.set_pixel(i, 255, 0, 0, 0.2)
+            blinks += 1
             blinkt.show()
             time.sleep(0.05)
+        if blinks > 20:
+            break
             #blinkt.show()
 
 
@@ -60,11 +64,11 @@ def main():
     n = 0
     cycle = 0
     while True:
-        blink(int(time.time()))
-        (a, step, n) = move(a, step, n)
-        if (a == 0 and step < 0):
-            cycle = cycle + 1
-        if (cycle > 1):
+        blink()
+        #(a, step, n) = move(a, step, n)
+        #if (a == 0 and step < 0):
+        cycle = cycle + 1
+        if cycle > 1:
             log.info("it shut down gracefully")
             break
 
