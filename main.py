@@ -38,11 +38,8 @@ def blink():
 
 
 def new_blinker(lights = []):
-    for i, light in enumerate(lights):
-        if light:
-            blinkt.set_pixel(i, 255, 0, 0, 0.2)
-        else:
-            blinkt.set_pixel(i, 0, 0, 0)
+    for i, l in enumerate(lights):
+        blinkt.set_pixel(i, l.r, l.g, l.b, 0.2)
         blinkt.show()
         time.sleep(0.5)
 
