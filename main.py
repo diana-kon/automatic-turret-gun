@@ -2,7 +2,7 @@
 
 import math
 import time
-from blinker import BLACK, RED, GREEN, PURPLE, slide
+from blinker import BLACK, RED, GREEN, PURPLE, slide, scroll, Color
 import logger
 
 import pantilthat
@@ -37,11 +37,10 @@ def blink():
         blinkt.show()
 
 
-def new_blinker(lights):
-    for i, l in enumerate(lights):
-        blinkt.set_pixel(i, l["r"], l["g"], l["b"], 0.2)
+def change_lights(lights: list[Color]):
+    for i, light in enumerate(lights):
+        blinkt.set_pixel(i, light.r, light.g, light.b, 0.1)
     blinkt.show()
-
 
 
 def main():
@@ -54,7 +53,7 @@ def main():
     lights = [PURPLE, GREEN, RED, BLACK, RED, GREEN, PURPLE, BLACK]
     while True:
         # blink()
-        new_blinker(lights)
+        change_lights(lights)
         lights = slide(lights)
         time.sleep(0.5)
         #(a, step, n) = move(a, step, n)

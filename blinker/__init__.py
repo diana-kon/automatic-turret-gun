@@ -1,11 +1,14 @@
-RED = {"r": 255, "g": 0, "b": 0}
-BLACK = {"r": 0, "g": 0, "b": 0}
-PURPLE = {"r": 156, "g": 2, "b": 163}
-GREEN = {"r": 0, "g": 255, "b": 0}
+from .color import Color
 
 
-def slide(lights):
-    updated_lights = []
+RED = Color(255, 0, 0)
+BLACK = Color(0, 0, 0)
+PURPLE = Color(156, 2, 163)
+GREEN = Color(0, 255, 0)
+
+
+def slide(lights: list[Color]) -> list[Color]:
+    updated_lights = list()
     for i, light in enumerate(lights):
         if i > 0:
             updated_lights.append(light)
