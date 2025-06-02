@@ -33,9 +33,9 @@ def angle(current, step):
 def blink(timestamp):
     while True:
         for i in range(8):
-            clear()
-            set_pixel(i, 255, 0, 0)
-            show()
+            blinkt.clear()
+            blinkt.set_pixel(i, 255, 0, 0)
+            blinkt.show()
             time.sleep(0.05)
             #blinkt.show()
 
