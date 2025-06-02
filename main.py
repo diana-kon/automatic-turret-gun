@@ -38,7 +38,7 @@ def blink():
             blinkt.set_pixel(i, 255, 0, 0, 0.2)
             blinks += 1
             blinkt.show()
-            time.sleep(0.05)
+            time.sleep(0.5)
         if blinks > 20:
             break
             #blinkt.show()
