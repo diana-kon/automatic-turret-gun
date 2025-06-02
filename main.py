@@ -68,7 +68,7 @@ def main():
         #(a, step, n) = move(a, step, n)
         #if (a == 0 and step < 0):
         cycle = cycle + 1
-        if cycle > 1:
+        if cycle > 10:
             log.info("it shut down gracefully")
             break
 
