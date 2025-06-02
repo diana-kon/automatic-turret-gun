@@ -34,7 +34,7 @@ def blink(timestamp):
     while True:
         for i in range(8):
             blinkt.clear()
-            blinkt.set_pixel(i, 255, 0, 0)
+            blinkt.set_pixel(i, 255, 0, 0, 0.2)
             blinkt.show()
             time.sleep(0.05)
             #blinkt.show()
