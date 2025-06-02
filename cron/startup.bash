@@ -5,7 +5,7 @@ echo "update"
 git pull
 echo "run"
 source .venv/bin/activate
-./main.py
+./main.py &>> error_log
 deactivate
 echo "repeat"
 cd cron
