@@ -1,9 +1,11 @@
 import logging
 
 from .datadog import DataDogHandler
+from .hoarder import Hoarder
+from .printer import Printer
 
 
-def create_logger(driver: logging.Handler, name=""):
+def create(driver: logging.Handler, name=""):
     if name == "":
         name = __name__
     logger = logging.getLogger(name)
@@ -14,13 +16,5 @@ def create_logger(driver: logging.Handler, name=""):
     return logger
 
 
-class Printer(logging.Handler):
-    def emit(self, record):
-        print(record)
-
-
-class Hoarder(logging.Handler):
-    records: list[logging.LogRecord] = []
-
-    def emit(self, record):
-        self.records.append(record)
+# compatibility with existing sources
+create_logger = create

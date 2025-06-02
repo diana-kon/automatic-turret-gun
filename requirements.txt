@@ -2,7 +2,12 @@ certifi==2025.4.26
 charset-normalizer==3.4.2
 datadog-api-client==2.35.0
 idna==3.10
+iniconfig==2.1.0
+packaging==25.0
 pantilthat==0.0.7
+pluggy==1.6.0
+Pygments==2.19.1
+pytest==8.4.0
 python-dateutil==2.9.0.post0
 requests==2.32.3
 six==1.17.0
