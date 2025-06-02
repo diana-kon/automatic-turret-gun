@@ -2,7 +2,7 @@
 
 import math
 import time
-from blinker import BLACK, RED, GREEN, PURPLE
+from blinker import BLACK, RED, GREEN, PURPLE, slide
 import logger
 
 import pantilthat
@@ -51,11 +51,11 @@ def main():
     step = 0.25
     n = 0
     cycle = 0
+    lights = [PURPLE, GREEN, RED, BLACK, RED, GREEN, PURPLE, BLACK]
     while True:
         # blink()
-        new_blinker([PURPLE, GREEN, RED, BLACK, RED, GREEN, PURPLE, BLACK])
-        time.sleep(0.5)
-        new_blinker([BLACK, BLACK, BLACK, BLACK, BLACK, BLACK, BLACK, BLACK])
+        new_blinker(lights)
+        lights = slide(lights)
         time.sleep(0.5)
         #(a, step, n) = move(a, step, n)
         #if (a == 0 and step < 0):
