@@ -10,3 +10,6 @@ def slide(lights):
             updated_lights.append(l)
     updated_lights.append(BLACK)
     return updated_lights
+
+def scroll(lights):
+    return lights
