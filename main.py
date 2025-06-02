@@ -31,30 +31,12 @@ def angle(current, step):
 
 
 def blink():
-    blinks = 0
-    while True:
-        for i in range(8):
-            blinkt.clear()
-            blinkt.set_pixel(i, 255, 0, 0, 0.2)
-            blinks += 1
-            blinkt.show()
-            time.sleep(0.5)
-        if blinks > 20:
-            break
-            #blinkt.show()
+    for i in range(8):
+        blinkt.clear()
+        blinkt.set_pixel(i, 255, 0, 0, 0.2)
+        blinkt.show()
+        time.sleep(0.5)
 
-
-
-
-
-#def blink(timestamp):
-#    if (timestamp % 2 == 0):
-#        blinkt.set_pixel(1, 199, 38, 3, 0.1)
-#    else:
-#        blinkt.set_pixel(0, 0, 0, 0)
-#    blinkt.show()
-
-#Log_S
 
 def main():
     log = logger.create_logger(logger.DataDogHandler())
