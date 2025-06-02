@@ -19,7 +19,7 @@ def move(a, step, n):
     # pantilthat.pan(a)
     # pantilthat.tilt(-20)
     if (a % 45 == 0 or a == 0):
-        blinkt.set_pixel(1, 0, 128, 0, 0.2)
+        blinkt.set_pixel(1, 156, 2, 163, 0.2)
         blinkt.show()
         time.sleep(2)
         blinkt.set_pixel(1, 0, 0, 0)
@@ -30,10 +30,12 @@ def move(a, step, n):
 
 def blink(timestamp):
     if (timestamp % 2 == 0):
-        blinkt.set_pixel(4, 199, 38, 3, 0.1)
+        blinkt.set_pixel(1, 199, 38, 3, 0.1)
     else:
         blinkt.set_pixel(0, 0, 0, 0)
     blinkt.show()
+
+#Log_S
 
 def main():
     log = logger.create_logger(logger.DataDogHandler())
