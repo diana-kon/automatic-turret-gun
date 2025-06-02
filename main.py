@@ -38,6 +38,17 @@ def blink():
         time.sleep(0.5)
 
 
+def new_blinker(lights):
+    for i, light in lights:
+        if light:
+            blinkt.set_pixel(i, 255, 0, 0, 0.2)
+        else:
+            blinkt.set_pixel(i, 0, 0, 0)
+        blinkt.show()
+        time.sleep(0.5)
+
+
+
 def main():
     log = logger.create_logger(logger.DataDogHandler())
     log.info("it started successfully, changed")
@@ -46,7 +57,9 @@ def main():
     n = 0
     cycle = 0
     while True:
-        blink()
+        # blink()
+        new_blinker([True, False, False, False, False, False, True, False])
+        new_blinker([False, True, False, False, False, False, False, True])
         #(a, step, n) = move(a, step, n)
         #if (a == 0 and step < 0):
         cycle = cycle + 1
