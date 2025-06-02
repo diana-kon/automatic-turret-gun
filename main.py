@@ -30,7 +30,7 @@ def move(a, step, n):
 
 def blink(timestamp):
     if (timestamp % 2 == 0):
-        blinkt.set_pixel(0, 199, 38, 3, 0.1)
+        blinkt.set_pixel(4, 199, 38, 3, 0.1)
     else:
         blinkt.set_pixel(0, 0, 0, 0)
     blinkt.show()
