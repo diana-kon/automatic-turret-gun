@@ -2,7 +2,7 @@
 
 import math
 import time
-
+from blinker import BLACK, RED, GREEN, PURPLE
 import logger
 
 import pantilthat
@@ -35,7 +35,6 @@ def blink():
         blinkt.clear()
         blinkt.set_pixel(i, 255, 0, 0, 0.2)
         blinkt.show()
-        time.sleep(0.5)
 
 
 def new_blinker(lights = []):
@@ -58,8 +57,10 @@ def main():
     cycle = 0
     while True:
         # blink()
-        new_blinker([True, False, False, False, False, False, True, False])
-        new_blinker([False, True, False, False, False, False, False, True])
+        new_blinker([PURPLE, GREEN, RED, BLACK, RED, GREEN, PURPLE, BLACK])
+        time.sleep(0.5)
+        new_blinker([BLACK, BLACK, BLACK, BLACK, BLACK, BLACK, BLACK, BLACK])
+        time.sleep(0.5)
         #(a, step, n) = move(a, step, n)
         #if (a == 0 and step < 0):
         cycle = cycle + 1
