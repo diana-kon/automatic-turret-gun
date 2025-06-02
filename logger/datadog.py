@@ -40,9 +40,9 @@ class DataDogHandler(logging.Handler):
             print(response)
 
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-data_dog_handler = DataDogHandler()
-formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-data_dog_handler.setFormatter(formatter)
-logger.addHandler(data_dog_handler)
+# logger = logging.getLogger(__name__)
+# logger.setLevel(logging.DEBUG)
+# data_dog_handler = DataDogHandler()
+# formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+# data_dog_handler.setFormatter(formatter)
+# logger.addHandler(data_dog_handler)
