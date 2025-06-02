@@ -35,7 +35,7 @@ def blink(timestamp):
     blinkt.show()
 
 def main():
-    logger.info("it started successfully")
+    logger.info("it started successfully, changed")
     a = 0
     step = 0.25
     n = 0
