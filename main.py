@@ -54,7 +54,7 @@ def main():
     while True:
         # blink()
         change_lights(lights)
-        lights = slide(lights)
+        lights = scroll(lights)
         time.sleep(0.5)
         #(a, step, n) = move(a, step, n)
         #if (a == 0 and step < 0):

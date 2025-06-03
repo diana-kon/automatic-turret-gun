@@ -10,37 +10,46 @@ def test_single_item_also_changes_nothing():
 
 
 def test_two_item_scroll_in_effect_reverses_items():
-    assert blinker.scroll([blinker.RED, blinker.GREEN]) == [blinker.GREEN, blinker.RED]
+    lights = [blinker.RED, blinker.GREEN]
+    assert blinker.scroll(lights) == [blinker.GREEN, blinker.RED]
 
 
 def test_three_items_scroll():
-    initial_lights = [blinker.RED, blinker.GREEN, blinker.PURPLE]
-    expected_result = [blinker.GREEN, blinker.PURPLE, blinker.RED]
+    initial_lights = [
+        blinker.Color(1, 1, 1),
+        blinker.Color(2, 2, 2),
+        blinker.Color(3, 3, 3),
+    ]
+    expected_result = [
+        blinker.Color(3, 3, 3),
+        blinker.Color(1, 1, 1),
+        blinker.Color(2, 2, 2),
+    ]
     actual_result = blinker.scroll(initial_lights)
     assert actual_result == expected_result
 
 
 def test_full_eight_digit_scroll():
     lights = [
-        blinker.PURPLE,
-        blinker.GREEN,
-        blinker.RED,
-        blinker.BLACK,
-        blinker.RED,
-        blinker.GREEN,
-        blinker.PURPLE,
-        blinker.BLACK
+        blinker.Color(1, 1, 1),
+        blinker.Color(2, 2, 2),
+        blinker.Color(3, 3, 3),
+        blinker.Color(4, 4, 4),
+        blinker.Color(5, 5, 5),
+        blinker.Color(6, 6, 6),
+        blinker.Color(7, 7, 7),
+        blinker.Color(8, 8, 8),
     ]
 
     expected_result = [
-        blinker.GREEN,
-        blinker.RED,
-        blinker.BLACK,
-        blinker.RED,
-        blinker.GREEN,
-        blinker.PURPLE,
-        blinker.BLACK,
-        blinker.PURPLE
+        blinker.Color(8, 8, 8),
+        blinker.Color(1, 1, 1),
+        blinker.Color(2, 2, 2),
+        blinker.Color(3, 3, 3),
+        blinker.Color(4, 4, 4),
+        blinker.Color(5, 5, 5),
+        blinker.Color(6, 6, 6),
+        blinker.Color(7, 7, 7),
     ]
 
     updated_lights = blinker.scroll(lights)
