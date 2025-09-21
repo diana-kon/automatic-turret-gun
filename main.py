@@ -16,8 +16,6 @@ def angle(current, step):
 #def move(a, step, n):
 #    (a, step) = angle(a, step)
     # do not control the pan-tilt for now
-    # pantilthat.pan(a)
-    # pantilthat.tilt(-20)
     #if (a % 45 == 0 or a == 0):
     #    blinkt.set_pixel(0, 156, 2, 163, 0.2)
     #    blinkt.show()
@@ -49,6 +47,8 @@ def main():
     a = 0
     step = 0.25
     n = 0
+    pantilthat.pan(a)
+    pantilthat.tilt(-20)
     cycle = 0
     lights = [PURPLE, GREEN, PURPLE, PURPLE, PURPLE, PURPLE, PURPLE, PURPLE]
     while True:
