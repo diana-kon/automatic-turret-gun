@@ -47,8 +47,8 @@ def main():
     a = 0
     step = 0.25
     n = 0
-    pantilthat.pan(a)
-    pantilthat.tilt(20)
+    # pantilthat.pan(a)
+    # pantilthat.tilt(20)
     cycle = 0
     lights = [PURPLE, GREEN, PURPLE, PURPLE, PURPLE, PURPLE, PURPLE, PURPLE]
     while True:
