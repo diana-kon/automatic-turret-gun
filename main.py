@@ -47,8 +47,8 @@ def main():
     a = 0
     step = 0.25
     n = 0
-    pantilthat.clear()
-    pantilthat.pan(60)
+    #pantilthat.clear()
+    #pantilthat.pan(60)
     # pantilthat.pan(a)
     # pantilthat.tilt(20)
     cycle = 0
