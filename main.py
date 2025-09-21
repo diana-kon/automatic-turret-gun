@@ -50,7 +50,7 @@ def main():
     step = 0.25
     n = 0
     cycle = 0
-    lights = [PURPLE, GREEN, RED, BLACK, RED, GREEN, PURPLE, BLACK]
+    lights = [PURPLE, GREEN, PURPLE, PURPLE, PURPLE, PURPLE, PURPLE, PURPLE]
     while True:
         # blink()
         change_lights(lights)
